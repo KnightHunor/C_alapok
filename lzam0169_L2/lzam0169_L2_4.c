@@ -52,7 +52,8 @@ void jatek()
         }
         fprintf(g, "\n");
     }
-    fprintf(g, "\nAz osszes jatekos nyert\n");
+    if(!over)
+        fprintf(g, "\nAz osszes jatekos nyert\n");
     fclose(g);
 }
 
