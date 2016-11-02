@@ -21,6 +21,9 @@ void jatek()
 
     int jatekos = 1, kor  = 1;
     int a = 0, b = 0; /* a dobokocka szamai */
+
+    int over = 0; /* bool */
+
     fprintf(g, "\t1.\t2.\t3.\t4.\t5.\n");
     for (kor = 1; kor <= 5; kor++)
     {
@@ -30,6 +33,7 @@ void jatek()
             if (jatekos == kor)
             {
                 fprintf(g, "-\t");
+                continue;
             }
             else
             {
@@ -39,9 +43,12 @@ void jatek()
                 {
                     fprintf(g, "\nA nyertes a %d. jatekos.\n", jatekos);
                     fprintf(g, "A jatek a %d. korben ert veget.\n", kor);
-                    return;
+                    over = 1; /* true */
+                    break;
                 }
             }
+            if (over)
+                break;
         }
         fprintf(g, "\n");
     }
