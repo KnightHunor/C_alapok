@@ -1,6 +1,6 @@
-/*  Nev: Laszlo Hunor
- *  Csoport: 611
- *  Azonosito: lzam0169
+/* Nev: Laszlo Hunor
+ * Csoport: 611
+ * Azonosito: lzam0169
  */
 
 /*  Dobokockas jatek */
