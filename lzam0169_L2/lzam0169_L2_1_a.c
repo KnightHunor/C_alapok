@@ -29,7 +29,7 @@ int ossz()
 
 void kiir(int a)
 {
-    FILE *f = fopen("output_L2_1.a.txt", "w");
+    FILE *f = fopen("output_L2_1_a.txt", "w");
 
     fprintf(f, "%d", a);
 
