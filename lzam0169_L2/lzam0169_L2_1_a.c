@@ -9,7 +9,7 @@
 
 int ossz()
 {
-    int n, i, a, ossz = 1; /* osszeggel jeleolom a szorzatot */
+    int n, i, a, ossz = 1, van = 0; /* osszeggel jeleolom a szorzatot */
 
     FILE *f = fopen("input_L2_1_a.txt", "r");
 
@@ -20,10 +20,15 @@ int ossz()
         fscanf(f, "%d", &a);
 
         if (!(a%2))
+        {
+            van = 1;
             ossz *= a;
+        }
     }
     fclose (f);
 
+    if (!van)
+        return 0;
     return (ossz);
 }
 
@@ -31,7 +36,10 @@ void kiir(int a)
 {
     FILE *f = fopen("output_L2_1_a.txt", "w");
 
-    fprintf(f, "%d", a);
+    if (a != 0)
+        fprintf(f, "%d", a);
+    else
+        fprintf(f, "Nincs paros szam");
 
     fclose(f);
 }
