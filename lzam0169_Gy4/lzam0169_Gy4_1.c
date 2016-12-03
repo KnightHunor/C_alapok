@@ -18,9 +18,9 @@ int main()
 
     fscanf(f, "%d", &n);
 
-    a1 = (int*)malloc(sizeof(int)*(n + 1));
-    a2 = (int*)malloc(sizeof(int)*(n + 1));
-    a3 = (int*)malloc(sizeof(int)*(n + 1));
+    a1 = (int*)malloc(sizeof(int) * n);
+    a2 = (int*)malloc(sizeof(int) * n);
+    a3 = (int*)malloc(sizeof(int) * n);
 
     int i;
 
@@ -36,7 +36,13 @@ int main()
     f = fopen("output_Gy4_1.txt", "w");
     for (i = 0; i < n; i++)
         fprintf(f, "%d ", *(a3 + i));
+    
+    /* cleanup */
     fclose(f);
+
+    free(a1);
+    free(a2);
+    free(a3);
 
     return 0;
 }
