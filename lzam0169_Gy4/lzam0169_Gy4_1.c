@@ -2,7 +2,7 @@
  * lzam0169
  * 611
  *
- * hozzunk etre ket n elemu tombot, es egy harmadikat,
+ * hozzunk letre ket n elemu tombot, es egy harmadikat,
  * amely az elozo ketto osszeget tartalmazza 
  */
 
